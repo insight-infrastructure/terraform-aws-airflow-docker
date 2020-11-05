@@ -1,0 +1,16 @@
+---
+- hosts: all
+  roles:
+    - setup
+    - role: volumes
+      when: instance_store_enabled | default(false) | bool
+    - role: christiangda.amazon_cloudwatch_agent
+      when: cloudwatch_enable | default(false) | bool
+    - {role: nginx, when: airflow_ssl_enabled | bool}
+    - insight_infra.airflow_docker
+
+  vars:
+    # Airflow
+    airflow_user: airflow
+    airflow_group: airflow
+    airflow_executor: SequentialExecutor
