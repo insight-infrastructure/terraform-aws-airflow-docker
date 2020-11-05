@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "modules/robinhood/airflow-prometheus-exporter": "https://github.com/robinhood/airflow-prometheus-exporter",
+    "modules/stefanprodan/dockprom": "https://github.com/stefanprodan/dockprom",
+    "modules/insight-infrastructure/airflow-docker-compose": "https://github.com/insight-infrastructure/airflow-docker-compose",
+    "modules/insight-infrastructure/ansible-role-docker-airflow": "https://github.com/insight-infrastructure/ansible-role-docker-airflow"
+  }
+}
