@@ -7,7 +7,7 @@
     - role: christiangda.amazon_cloudwatch_agent
       when: cloudwatch_enable | default(false) | bool
     - {role: nginx, when: airflow_ssl_enabled | bool}
-    - insight_infra.airflow_docker
+    - insight_infra.ansible_role_airflow_docker
 
   vars:
     # Airflow

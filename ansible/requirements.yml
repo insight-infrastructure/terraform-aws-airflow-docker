@@ -1,4 +1,4 @@
 roles:
-  - src: insight_infra.airflow_docker
+  - src: insight_infra.ansible_role_airflow_docker
   - src: geerlingguy.certbot
     version: 3.0.3
