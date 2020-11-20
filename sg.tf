@@ -42,7 +42,7 @@ variable "additional_security_group_ids" {
 resource "aws_security_group" "this" {
   count       = var.create_sg && var.create ? 1 : 0
   vpc_id      = var.vpc_id == "" ? null : var.vpc_id
-  name        = "${var.name}-sg"
+  name        = "${var.name}-airflow-sg"
   description = "Airflow security group"
   tags        = var.tags
 }
